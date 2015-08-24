@@ -121,7 +121,7 @@
         <property name="phpcpd.done" value="true"/>
     </target>
     <target name="phpunit" unless="phpunit.done" depends="prepare" description="Run unit tests with PHPUnit">
-        <exec executable="${toolsdir}phpunit" failonerror="true" taskname="phpunit">
+        <exec executable="${toolsdir}phpunit" taskname="phpunit">
             <arg value="--configuration"/>
             <arg path="${basedir}/phpunit.xml"/>
             <arg value="--coverage-clover"/>
