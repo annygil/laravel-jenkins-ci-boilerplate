@@ -38,17 +38,7 @@
         <property name="prepare.done" value="true"/>
     </target>
     <target name="lint" unless="lint.done" description="Perform syntax check of sourcecode files">
-        <apply executable="php"  taskname="lint">
-            <arg value="-l"/>
-            <fileset dir="${basedir}/app">
-                <include name="**/*.php"/>
-                <modified/>
-            </fileset>
-            <fileset dir="${basedir}/tests">
-                <include name="**/*.php"/>
-                <modified/>
-            </fileset>
-        </apply>
+
         <property name="lint.done" value="true"/>
     </target>
     <target name="phploc" unless="phploc.done" description="Measure project size using PHPLOC and print human readable output. Intended for usage on the command line.">
